@@ -30,12 +30,12 @@ function App() {
     <div className={styles.App}>
       <h1>Akatsuki Members</h1>
       <h3>Wanted Criminals</h3>
+      <button onClick={prevSlide}>Previous</button>
       <button onClick={nextSlide}>Next</button>
-      <button onClick={prevSlide}>Next</button>
       <div>
         {
-          akatsuki.map((index) => <img src={index.src} title={index.title} alt={index.alt} 
-          height='250' width='250' style={{border: 'solid', backgroundColor: '#ff1d58'}} />)
+          akatsuki.map((memeber, index) => current === index && (<img src={memeber.src} title={index.title} alt={index.alt} 
+          height='250' width='250' style={{border: 'solid', backgroundColor: '#ff1d58'}} />))
         }
       </div>
     </div>
